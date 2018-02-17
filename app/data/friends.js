@@ -1,6 +1,6 @@
 var friendArray = [
     {
-        "name":"Ahmed",
+        "name":"Ozzy",
         "photo":"http://cutecatshq.com/wp-content/uploads/2014/05/Ozzy-Dating-Profile-Photo.-Hello-Ladies.jpg",
         "scores":[
             5,

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cjrabe17/friendfinder#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2"
   }
 }
