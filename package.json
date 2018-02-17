@@ -1,0 +1,23 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Week 13 homework for the UCF Coding Bootcamp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjrabe17/friendfinder.git"
+  },
+  "author": "Cassie Rabe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjrabe17/friendfinder/issues"
+  },
+  "homepage": "https://github.com/cjrabe17/friendfinder#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
