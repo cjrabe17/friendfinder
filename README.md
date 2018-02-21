@@ -1,6 +1,6 @@
 # friendfinder
 
-A friend-finding, compatability-based application. See it live at [FriendFinder](https://protected-stream-30284.herokuapp.com/)
+A compatability-based, friend-finding application. See it live at [here](https://protected-stream-30284.herokuapp.com/).
 
 ## Getting Started
 
