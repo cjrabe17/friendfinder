@@ -1,4 +1,4 @@
-var friendArray = [
+var friends = [
     {
         "name":"Ozzy",
         "photo":"http://cutecatshq.com/wp-content/uploads/2014/05/Ozzy-Dating-Profile-Photo.-Hello-Ladies.jpg",
@@ -52,17 +52,17 @@ var friendArray = [
         "photo":"https://www.eclectech.co.uk/b3ta/punksheepneistpoint-wallpaper.jpg",
         "scores":[
             1,
-            5,
+            1,
             4,
             4,
             5,
             1,
             2,
-            5,
-            4,
+            3,
+            3,
             1
           ]
       }
 ];
 
-module.exports = friendArray;
+module.exports = friends;

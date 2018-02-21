@@ -146,7 +146,7 @@
     <br>
 </div>
 
-<!-- Modal to appear when survey is submitted -->
+<!-- Modal to appear once survey is submitted -->
 <div id="found-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
   
@@ -193,7 +193,7 @@
                 
             return answered;
         }
-            
+        // Once form is completely filled out
         if (checkForm()) {
             var newFriend = {
                 name: $("#name").val().trim(),
@@ -211,8 +211,6 @@
                     $("#q10").val()
                 ]
             };
-
-            console.log(newFriend);
     
             var currentURL = window.location.origin;
         
@@ -222,7 +220,7 @@
                 $("#match-img").attr("src", data.photo).attr("width", "400px");
                 $("#found-modal").modal("toggle");
                 
-                // Clear form
+                // Clear old form data
                 $("#name").val("");
                 $("#photo").val("");
                 $("#q1").val("");

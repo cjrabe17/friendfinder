@@ -1,21 +1,17 @@
-var friendData = require("../data/friends");
+var friends = require("../data/friends");
 
 module.exports = function(app) {
 
     app.get("/api/friends", function(req, res) {
-        console.log("api/friends get");
-        res.json(friendData);
+        // Displays a JSON of all possible friends.
+        res.json(friends);
     });
 
     app.post("/api/friends", function(req, res) {
-        console.log("api/friends post");
-        // A POST routes `/api/friends`. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic
-
+        // Handles incoming survey results and the compatibility logic
         var newScores = req.body;
-        console.log(newScores);
-
         var scoresArray = [];
-        friendData.forEach(friendScore => {
+        friends.forEach(friendScore => {
             var scoreTotal = 0;
             for (var i = 0; i < 10; i++) {
                 scoreTotal += Math.abs(newScores.scores[i] - friendScore.scores[i]);
@@ -24,21 +20,21 @@ module.exports = function(app) {
             scoresArray.push(scoreTotal);
         });
 
-        // Find a match
         var findLowest = Math.min.apply(null, scoresArray);
 
+        // Find the best match
         for (var i = 0; i < scoresArray.length; i++) {
             if (scoresArray[i] === findLowest) {
                 var bestMatch = {
-                    name: friendData[i].name,
-                    photo: friendData[i].photo
+                    name: friends[i].name,
+                    photo: friends[i].photo
                 };
 
                 res.send(bestMatch);
             }
         }
 
-        friendData.push(newScores);
-        console.log(friendData);
+        // Send new submission to api/friends
+        friends.push(newScores);
     });
 }
