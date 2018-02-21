@@ -5,6 +5,54 @@ var friendArray = [
         "scores":[
             5,
             1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+      },
+      {
+        "name":"Jack",
+        "photo":"http://wtfgadgets.com/wp-content/uploads/2015/03/Dog-Love-Dog-Dating.png",
+        "scores":[
+            1,
+            5,
+            4,
+            4,
+            5,
+            5,
+            2,
+            5,
+            1,
+            4
+          ]
+      },
+      {
+        "name":"Sharon",
+        "photo":"https://mymodernmet.com/wp/wp-content/uploads/archive/f6KKcq5EfD5d33-YtPwi_1082036364.jpeg",
+        "scores":[
+            1,
+            5,
+            4,
+            4,
+            5,
+            1,
+            2,
+            5,
+            4,
+            1
+          ]
+      },
+      {
+        "name":"Kelly",
+        "photo":"https://www.eclectech.co.uk/b3ta/punksheepneistpoint-wallpaper.jpg",
+        "scores":[
+            1,
+            5,
             4,
             4,
             5,

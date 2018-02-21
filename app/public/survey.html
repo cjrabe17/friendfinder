@@ -3,18 +3,26 @@
 <head>
 	<title>Friend Finder</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <div class="container">
-        <div class="jumbotron text-center">
-            <h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Friend Finder</h1>
-            <hr>
-            <p>Answer the questions below!</p>
-            </div>
+    <div class="jumbotron text-center">
+        <h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Friend Finder</h1>
+        <hr>
+        <p>Answer the questions below!</p>
+    </div>
+
+    <!-- Survey content -->
     <div class="row">
         <div class="col-md-8">
             <h2>Survey Questions</h2>
@@ -27,7 +35,7 @@
             <hr>
             <h3><b>Question 1</b></h3>
             <h4>I am a cat person.</h4>
-            <select id="q1" required>
+            <select id="q1" class="chosen-select">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -37,7 +45,7 @@
             </select>
             <h3><b>Question 2</b></h3>
             <h4>I am a dog person.</h4>
-            <select class="chosen-select" id="q2">
+            <select class="chosen-select" id="q2" class="chosen-select">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -47,17 +55,7 @@
             </select>
             <h3><b>Question 3</b></h3>
             <h4>Beyonce is an amazing singer.</h4>
-            <select class="chosen-select" id="q3">
-                <option value></option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <h3><b>Question 4</b></h3>
-            <h4>Programmers should use tabs over spaces.</h4>
-            <select class="chosen-select" id="q4">
+            <select class="chosen-select" id="q3" class="chosen-select">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -67,7 +65,7 @@
             </select>
             <h3><b>Question 4</b></h3>
             <h4>The winter olympics are better than the summer olympics.</h4>
-            <select class="chosen-select" id="q4">
+            <select class="chosen-select" id="q4" class="chosen-select">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -77,7 +75,7 @@
             </select>
             <h3><b>Question 5</b></h3>
             <h4>Pineapple is my pizza topping of choice.</h4>
-            <select class="chosen-select" id="q5">
+            <select class="chosen-select" id="q5" class="chosen-select">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -87,7 +85,7 @@
             </select>
             <h3><b>Question 6</b></h3>
             <h4>Xbox is better than PS4, Nintendo, PC, etc.</h4>
-            <select class="chosen-select" id="q6">
+            <select class="chosen-select" id="q6" class="chosen-select">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -97,7 +95,7 @@
             </select>
             <h3><b>Question 7</b></h3>
             <h4>Cars are more dangerous than planes.</h4>
-            <select class="chosen-select" id="q7">
+            <select class="chosen-select" id="q7" class="chosen-select">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -107,7 +105,7 @@
             </select>
             <h3><b>Question 8</b></h3>
             <h4>Florida has the craziest people in the U.S.</h4>
-            <select class="chosen-select" id="q8">
+            <select class="chosen-select" id="q8" class="chosen-select">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -117,7 +115,7 @@
             </select>
             <h3><b>Question 9</b></h3>
             <h4>GIF is pronounced jif, like the peanut butter.</h4>
-            <select class="chosen-select" id="q9">
+            <select class="chosen-select" id="q9" class="chosen-select">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -127,7 +125,7 @@
             </select>
             <h3><b>Question 10</b></h3>
             <h4>Chick-fil-A has some of the best french fries.</h4>
-            <select class="chosen-select" id="q10">
+            <select class="chosen-select" id="q10" class="chosen-select">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -148,39 +146,100 @@
     <br>
 </div>
 
-<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Modal to appear when survey is submitted -->
+<div id="found-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">We've Found You a Friend!</h4>
+        </div>
+        <div class="modal-body">
+  
+  
+          <h2 id="match-buddy"></h2>
+          <img id="match-img">
+  
+        </div>
+        <div class="modal-footer" id="notFoundModal">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+<!-- FE JavaScript for submission btn click -->
 <script type="text/javascript">
     $("#submit").on("click", function(event) {
-        console.log("clicked!");
         event.preventDefault();
+        // To validate form
+        function checkForm() {
+            var answered = true;
 
-        var newFriend = {
-            name: $("#name").val().trim(),
-            photo: $("#photo").val().trim(),
-            scores: [
-                $("#q1").val(),
-                $("#q2").val(),
-                $("#q3").val(),
-                $("#q4").val(),
-                $("#q5").val(),
-                $("#q6").val(),
-                $("#q7").val(),
-                $("#q8").val(),
-                $("#q9").val(),
-                $("#q10").val()
-            ]
-        };
+            $(".form-control").each(function() {
+                if ($(this).val() === "") {
+                    answered = false;
+                }
+             });
 
-        console.log(newFriend);
+            $(".chosen-select").each(function() {
+                if ($(this).val() === "") {
+                    answered = false;
+                }
+            });
+                
+            return answered;
+        }
+            
+        if (checkForm()) {
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
 
-        $.post("/api/friends", newFriend, function(data) {
-            // $("#match-name").text(data.name);
-            // $("#match-img").attr("src", data.photo);
-
-            // $("#results-modal").modal("toggle");
-        });
-
-    });
+            console.log(newFriend);
+    
+            var currentURL = window.location.origin;
+        
+            $.post(currentURL + "/api/friends", newFriend, function(data) {
+                // Display match in modal
+                $("#match-buddy").text(data.name);
+                $("#match-img").attr("src", data.photo).attr("width", "400px");
+                $("#found-modal").modal("toggle");
+                
+                // Clear form
+                $("#name").val("");
+                $("#photo").val("");
+                $("#q1").val("");
+                $("#q2").val("");
+                $("#q3").val("");
+                $("#q4").val("");
+                $("#q5").val("");
+                $("#q6").val("");
+                $("#q7").val("");
+                $("#q8").val("");
+                $("#q9").val("");
+                $("#q10").val("");
+            });
+        } else {
+            alert("It seems you missed a question.");
+        }
+	});
 </script>
 
 </body>
