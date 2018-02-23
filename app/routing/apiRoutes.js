@@ -10,21 +10,21 @@ module.exports = function(app) {
     app.post("/api/friends", function(req, res) {
         // Handles incoming survey results and the compatibility logic
         var newScores = req.body;
-        var scoresArray = [];
+        var scoresArr = [];
         friends.forEach(friendScore => {
-            var scoreTotal = 0;
+            var total = 0;
             for (var i = 0; i < 10; i++) {
-                scoreTotal += Math.abs(newScores.scores[i] - friendScore.scores[i]);
+                total += Math.abs(newScores.scores[i] - friendScore.scores[i]);
             }
 
-            scoresArray.push(scoreTotal);
+            scoresArr.push(total);
         });
 
-        var findLowest = Math.min.apply(null, scoresArray);
+        var findLowest = Math.min.apply(null, scoresArr);
 
         // Find the best match
-        for (var i = 0; i < scoresArray.length; i++) {
-            if (scoresArray[i] === findLowest) {
+        for (var i = 0; i < scoresArr.length; i++) {
+            if (scoresArr[i] === findLowest) {
                 var bestMatch = {
                     name: friends[i].name,
                     photo: friends[i].photo
